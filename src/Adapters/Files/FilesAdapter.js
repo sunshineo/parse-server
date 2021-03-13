@@ -104,7 +104,7 @@ export function validateFilename(filename): ?Parse.Error {
     return new Parse.Error(Parse.Error.INVALID_FILE_NAME, 'Filename too long.');
   }
 
-  const regx = /^[_a-zA-Z0-9][a-zA-Z0-9@. ~_-]*$/;
+  const regx = /^[_a-zA-Z0-9][a-zA-Z0-9@. ~_:-]*$/;
   if (!filename.match(regx)) {
     return new Parse.Error(Parse.Error.INVALID_FILE_NAME, 'Filename contains invalid characters.');
   }
